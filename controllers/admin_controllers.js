@@ -50,7 +50,7 @@ exports.addTrain = async (req, res) => {
 
   //Feature 2: updating seats of train (admin only)
   exports.updateTrainSeats = async (req, res) => {
-    const { trainId } = req.body;
+    const trainId = req.params.trainId;
     const { totalSeats, availableSeats } = req.body; 
   
     if (totalSeats === undefined || availableSeats === undefined) {
